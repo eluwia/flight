@@ -6,11 +6,8 @@
 html {
     scroll-behavior: smooth;
 }
-
-middle {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    width: 100%;
+#middle {
+margin-bottom: -50px;
 }
 forminput {
     width: 300px;
@@ -23,7 +20,7 @@ forminput {
     padding: 0.5em 1.34em;
     margin-bottom: 1em;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #212121;
     border-radius: 5em;
 }
 body {
@@ -35,6 +32,8 @@ body {
 form {
     max-width: 300px;
     margin: 10em auto;
+	position: relative;
+
 }
 legend {
     font-size: 24px;
@@ -60,10 +59,10 @@ transition: all 0.2s cubic-bezier(0.55, -0.55, 1, 1.55);
 -webkit-transform-origin: left;
 }
 input[type="text"]:focus {
-    border: 1px solid #00bafa;
+    border: 1px solid #212121;
 }
 input[type="text"]:focus::-webkit-input-placeholder {
-color: #00bafa;
+color: #212121;
 }
 input[type="text"]:focus, input[type="text"]:valid {
 outline: none;
@@ -73,7 +72,7 @@ input[type="text"]:focus::-webkit-input-placeholder, input[type="text"]:valid ~ 
 -webkit-transform: translate(0, -75%) scale(0.9, 0.9);
 visibility: visible !important;
 overflow: visible;
-text-shadow: -1px 0 white, -2px 0 white, -3px 0 white, -4px 0 white, -5px 0 white, 1px 0 white, 2px 0 white, 3px 0 white, 4px 0 white, 5px 0 white, -1px -1px white, -2px -2px white, -3px -3px white, -4px -4px white, -5px -5px white;
+	
 }
 #border {
     width: 350px;
@@ -175,7 +174,7 @@ text-shadow: -1px 0 white, -2px 0 white, -3px 0 white, -4px 0 white, -5px 0 whit
 }
 .topnav a.active {
     background-color: #1060BC;
-    color: white;
+    color: ;
 }
 #navbar2 {
 background:
@@ -186,36 +185,145 @@ background:
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 }
 .innertext {
-   
     margin-left: 90px;
     font-size: 20px;
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
 }
-	.pic {
-    width: 275px;
-    height: 275px;
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: #f9f9f9;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+.main-title {
+    color: #2d2d2d;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0.7em 0;
+}
+.container {
+    padding: 1em 0;
+    float: left;
+    display: inline-block;
+}
+@media screen and {
+.container {
+display: block;
+width: 100%;
+}
+}
+@media screen and {
+.container {
+}
+}
+.container .title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.content {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 400px;
     margin-left: 90px;
+    padding-left: 10px;
 }
-.pic:hover {
+.content .content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+	max-height: 96%;
+	max-width: 98%;
+    height: 96%;
+    width: 98%;
+    left: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
     opacity: 0;
-	transition:opacity 3s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
 }
-	#airbnb:hover:active:#airbnb_ {
-		padding: 0px;
-		visibility: visible;
+.content:hover .content-overlay {
+    opacity: 1;
+	max-height: 400px;
+	max-width: 400px;
+}
+.content-image {
+    width: 100%;
+}
+.content-details {
+    float: left;
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+.content-details p {
+    color: #fff;
+    font-size: 0.8em;
+}
+.fadeIn-bottom {
+    top: 80%;
+}
+.additonalservices {
+    margin-left: 90px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    font-size: 2em;
+	text-align: left;
+}
+.intext {
+    margin-left: 90px;
+    color: black;
+    font-size: 0.9em;
+}
+	.bg {
+		background-image: url("background.jpg");	
 	}
+
 </style>
 <meta charset="utf-8">
 <title> Scandinavian Airlines </title>
 </head>
 
-<body>
+<body> <section class="bg">
 <section id="topnav"> 
   <!-- topnav bar with #active and icons-->
   <div class="topnav"> <img class="logo" src="logo1.png" alt="" > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a class="active" href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
 </section>
 <section id="form">
-  <form id="passengerinfo" action=" ">
+  <form id="passengerinfo" action=" " method="get">
+	
     <div class="forminput" >
       <select name="hidden" id="select-title" >
         <option value="0" id="title">Select Title</option>
@@ -259,43 +367,104 @@ background:
     <div class="forminput" > <a href="#middle">
       <input type="submit" id="button1" value="Submit all and Go" onClick="scrollWin(0,920)">
       </a> </div>
-    <br>
-    <br>
   </form>
+	</section> 
+<section id="navbar2"></section>
+ <div class="topnav" id="middle"  > <img class="logo" src="logo1.png" alt=""  > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a  href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a class="active" href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a  href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
 </section>
-<section id="navbar2">
-  <div class="topnav" id="middle" > <img class="logo" src="logo1.png" alt=""  > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a  href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a class="active" href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a  href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
-</section>
-<br>
+<br><br>
+<div>
+  <h3 class="additonalservices"> Extra Travel Packages and Services </h3>
+  <p class="intext" > Choose travel extras according to your needs, flight preferences and different price options, decide how you will start to travel, pay as much as you need, fly comfortably. </p>
+</div>
+<div> <br>
+  <hr/>
+  <br>
+  <h3 class="additonalservices"> Travel Planning </h3>
+	<br>
+  <p class="intext"> Plan your travel </p>
+</div>
 <br>
 <div class="hoverboxlight">
-  <div>
-    <div class="headers">Travel Planning </div>
-    <div class="innertext"> Plan your travel with our services</div>
-  </div><br>
-  <div class="imagegallery"> <img src="airbnb.jpg" alt="airbnb" class="pic" id="airbnb" > <img src="car-ride.jpg" alt="car" class="pic" id="carride" > <img src="germany-schengen-visa.jpg" alt="visa" id="visa" class="pic">
-	  <br><br><br><br><br>
-    
-    <div class="headers"> Flight Readiness and Flight </div>
-    <div class="innertext"> Be ready to your flight with these services </div>
-	  <br>
-    <img src="seat.jfif" alt="seat" class="pic" id="seatselection" > <img src= "luggage.jpg" alt="luggage" class="pic" id="luggage"> <img src="meal.jpg" alt="meal" id="meal" class="pic"> <br>
-    <br>
-    <br><br><br>
-    <div class="headers"> Airport </div>
-    <div class="innertext"> Airport Accessibility </div><br>
-    <img src="carpark.jpg" alt="carpark" id="carpark" class="pic"> <img src="airportbus.jpg" alt="airbus" id="airbus" class="pic"> </div>
-  <div class="hoverbox_slide hoverbox_layer" >
-    <div class="hoverbox_text" id="airbnb_"> Hotels and AirBnb </div>
-    <div class="hoverbox_text" id="carride_" > Car Rental </div>
-    <div class="hoverbox_text" id="visa_" > Easy Visa </div>
-    <div class="hoverbox_text" id="seatselection_" > Seat Selection</div>
-    <div class="hoverbox_text" id="additional_baggage" > Additional Baggage </div>
-    <div class="hoverbox_text" id="food_selection" > Food Selection </div>
-    <div class="hoverbox_text" id="parking_" > Parking in Airport </div>
-    <div class="hoverbox_text" id="airport_access"  > Airport Access </div>
-  </div>
+  <div class="content"> <a href="airbnb.jpg" target="_blank" >
+    <div class="content-overlay"></div>
+    <img class="content-image" src="airbnb.jpg" alt="">
+    <div class="content-details fadeIn-bottom  ">
+      <h3 class="content-title">Hotels &amp; AirBnb</h3>
+      <p class="content-text">Hotel Reservation</p>
+    </div>
+    </a> </div>
 </div>
+<div class="content" > <a href="germany-schengen-visa.jpg" target="_blank" >
+  <div class="content-overlay"></div>
+  <img class="content-image" src="germany-schengen-visa.jpg" alt="" >
+  <div class="content-details fadeIn-bottom ">
+    <h3 class="content-title">Visa</h3>
+    <p class="content-text">Easy Visa Access</p>
+  </div>
+  </a>  </div><div>
+<div class="content" > <a href="car-ride.jpg" target="_blank" >
+  <div class="content-overlay"></div>
+  <img class="content-image" src="car-ride.jpg" alt="" >
+  <div class="content-details fadeIn-bottom ">
+    <h3 class="content-title">Rent a Car</h3>
+    <p class="content-text">Rent a Car or Search for Transfers </p>
+  </div>
+  </a> <br><br> </div></div>
+<div>
+  <p class="additonalservices"> Pre-Flight and During Flight </p>
+	<br>
+  <p class="intext"> Plan your flight </p>
+  <br>
+  <div class="content" > <a href="seat.jfif" target="_blank">
+    <div class="content-overlay"></div>
+  <img class="content-image" src="seat.jfif" alt=""  >
+    <div class="content-details fadeIn-bottom ">
+      <h3 class="content-title">Seat</h3>
+      <p class="content-text">Select the Seat you want</p>
+    </div>
+    </a> </div>
+</div><div>
+	<div class="content" > <a href="meal.jpg" target="_blank">
+    <div class="content-overlay"></div>
+ <img class="content-image" src="meal.jpg" alt=""  >
+    <div class="content-details fadeIn-bottom ">
+      <h3 class="content-title">Meal</h3>
+      <p class="content-text">Pre-order your meal</p>
+    </div>
+    </a> </div></div>
+<div>
+	<div class="content" > <a href="luggage.jpg" target="_blank">
+    <div class="content-overlay"></div>
+  <label for="seat"></label>  <img class="content-image" src="luggage.jpg" alt=""  >
+    <div class="content-details fadeIn-bottom ">
+      <h3 class="content-title">Baggage</h3>
+      <p class="content-text">Additional Baggage Packages</p>
+    </div>
+    </a> <br> <br> </div></div>
+<div> 
+  <p class="additonalservices">Accesibility Packages </p><br>
+  <p class="intext"> Parking lot reservation and more </p>
+	<br></div><div>
+	<div class="content" > <a href="carpark.jpg" target="_blank">
+    <div class="content-overlay"></div>
+  <label for="seat"></label>  <img class="content-image" src="carpark.jpg" alt=""  >
+    <div class="content-details fadeIn-bottom ">
+      <h3 class="content-title">Parking Lot</h3>
+      <p class="content-text">You can use our parking lot </p>
+    </div>
+    </a> </div></div>
+<div>
+	<div class="content" > <a href="airportbus.jpg" target="_blank">
+    <div class="content-overlay"></div>
+  <label for="seat"></label>  <img class="content-image" src="airportbus.jpg" alt=""  >
+    <div class="content-details fadeIn-bottom ">
+      <h3 class="content-title">Access to Airport</h3>
+      <p class="content-text">Order tickets for our airport buses</p>
+    </div>
+    </a> </div></div>
+
+	
 <script type="text/javascript">
 		
 	
@@ -309,7 +478,7 @@ background:
 	} //duplicate form for another passenger entry
 		function addpass(){
 	 var para = document.createElement("P");
-  para.innerHTML +="<form id='passengerinfo'> <select id='select-title'> <option value='0'>Select Your Title</option> <option value='1'>Mr.</option> <option value='2'>Ms.</option><option value='3'>Mx.</option> </select><input type='text' placeholder='First Name (as shown in ID)' required ><input type='text' placeholder='Last Name (as shown in ID)' required><input type='text' placeholder='Enter Your Phone Number' id='phone' pattern='[0-9]{10}' required> <input type='date' placeholder='Enter Your Bhirtday' id='date' required > <label for='yestc'  > I am TR Citizen </label> <input type='radio' name='chcktc'> <label for='notc'> I'm not TR Citizen </label>  <input type='radio' name='chcktc' id='tcno' > </hr> <input type='text' placeholder='Enter Citizen Number (if TR Citizen)'></form>";
+  para.innerHTML +="<form id='passengerinfo'> <select id='select-title'> <option value='0'>Select Your Title</option> <option value='1'>Mr.</option> <option value='2'>Ms.</option><option value='3'>Mx.</option> </select><input type='text' placeholder='First Name (as shown in ID)' required ><input type='text' placeholder='Last Name (as shown in ID)' required><input type='text' placeholder='Enter Your Phone Number' id='phone' pattern='[0-9]{10}' required> <input type='date' placeholder='Enter Your Bhirtday' id='date' required > <label for='yestc'  > I am TR Citizen </label> <input type='radio' name='chcktc'> <label for='notc'> I'm not TR Citizen </label>  <input type='radio' name='chcktc' id='tcno' > </hr> <input type='text' placeholder='Enter Your Citizen Number'></form>";
 		document.getElementById("passengerinfo").appendChild(para);
 			var form = document.getElementById("passengerinfo");
 			form.insertBefore(para, form.childNodes[0]);
