@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+middle {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+forminput {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+}
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 3em;
+    margin: 0;
+}
+form {
+    max-width: 300px;
+    margin: 10em auto;
+}
+legend {
+    font-size: 24px;
+    line-height: 3em;
+    margin: 0 auto;
+    color: #555;
+}
+input[type="text"] {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    width: 100%;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+    -webkit-font-smoothing: antialiased;
+}
+input[type="text"]::-webkit-input-placeholder {
+transition: all 0.2s cubic-bezier(0.55, -0.55, 1, 1.55);
+-webkit-transform-origin: left;
+}
+input[type="text"]:focus {
+    border: 1px solid #00bafa;
+}
+input[type="text"]:focus::-webkit-input-placeholder {
+color: #00bafa;
+}
+input[type="text"]:focus, input[type="text"]:valid {
+outline: none;
+color: #212121;
+}
+input[type="text"]:focus::-webkit-input-placeholder, input[type="text"]:valid ~ label ::-webkit-input-placeholder {
+-webkit-transform: translate(0, -75%) scale(0.9, 0.9);
+visibility: visible !important;
+overflow: visible;
+text-shadow: -1px 0 white, -2px 0 white, -3px 0 white, -4px 0 white, -5px 0 white, 1px 0 white, 2px 0 white, 3px 0 white, 4px 0 white, 5px 0 white, -1px -1px white, -2px -2px white, -3px -3px white, -4px -4px white, -5px -5px white;
+}
+#border {
+    width: 350px;
+}
+#select-title {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+#date {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+#phone {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+#button1 {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+#button2 {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+.logo {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    display: inline-block;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+}
+.topnav a {
+    display: inline-block;
+    list-style-type: none;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.topnav a.active {
+    background-color: #1060BC;
+    color: white;
+}
+#navbar2 {
+background:
+}
+.headers {
+    font-size: 40px;
+    margin-left: 90px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
+.innertext {
+   
+    margin-left: 90px;
+    font-size: 20px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
+	.pic {
+    width: 275px;
+    height: 275px;
+    margin-left: 90px;
+}
+.pic:hover {
+    opacity: 0;
+	transition:opacity 3s;
+}
+	#airbnb:hover:active:#airbnb_ {
+		padding: 0px;
+		visibility: visible;
+	}
+	
+</style>
+<meta charset="utf-8">
+<title> Scandinavian Airlines </title>
+</head>
+
+<body>
+<section id="topnav"> 
+  <!-- topnav bar with #active and icons-->
+  <div class="topnav"> <img class="logo" src="logo1.png" alt="" > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a class="active" href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
+</section>
+<section id="form">
+  <form id="passengerinfo" action=" ">
+    <div class="forminput" >
+      <select name="hidden" id="select-title" >
+        <option value="0" id="title">Select Title</option>
+        <option value="Mr.">Mr.</option>
+        <option value="Ms.">Ms.</option>
+        <option value="3">Mx.</option>
+      </select>
+    </div>
+    <div class="forminput" >
+      <input placeholder="First Name(as shown in ID)"  type="text" required id="name" >
+    </div>
+    <div class="forminput" >
+      <input placeholder="Last Name(as shown in ID)"  type="text" required id="lname" >
+    </div>
+    <div class="forminput" >
+      <input type="text" placeholder="Enter Your Phone Number"  id="phone" pattern="[0-9]{10}" required >
+    </div>
+    <div class="forminput">
+      <input placeholder="Enter Your Bhirtday"  type="date" id="date" required >
+    </div>
+    <div class="forminput" >
+      <label for="yestc">
+        <input type="radio" name="chktc" onClick="citnum()" id="yestc" />
+        <!-- Radio buttons to select --> 
+        I am TR Citizen </label>
+    </div>
+    <div class="forminput" >
+      <label for="notc">
+        <input type="radio" name="chktc" id="notc" onClick="citnum()">
+        I'm not TR Citizen</label>
+    </div>
+    <hr/>
+    <div class="forminput" >
+      <div id="TcCitizen" style="display: none" >
+        <input type="text" id="CitizenNumber" placeholder="Enter Your Citizen Number" pattern="[0-9]{11}" required   />
+      </div>
+      <div id="forminput" >
+        <input type="submit" id="button2" value="Add Another Passenger" onClick="addpass();scrollWin(0,-10000000000)">
+      </div>
+    </div>
+    <div class="forminput" > <a href="#middle">
+      <input type="submit" id="button1" value="Submit all and Go" onClick="scrollWin(0,920)">
+      </a> </div>
+    <br>
+    <br>
+  </form>
+</section>
+<section id="navbar2">
+  <div class="topnav" id="middle" > <img class="logo" src="logo1.png" alt=""  > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a  href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a class="active" href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a  href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
+</section>
+<br>
+<br>
+<div class="hoverboxlight">
+  <div>
+    <div class="headers">Travel Planning </div>
+    <div class="innertext"> Plan your travel with our services</div>
+  </div><br>
+  <div class="imagegallery"> <img src="airbnb.jpg" alt="airbnb" class="pic" id="airbnb" > <img src="car-ride.jpg" alt="car" class="pic" id="carride" > <img src="germany-schengen-visa.jpg" alt="visa" id="visa" class="pic">
+	  <br><br><br><br><br>
+    
+    <div class="headers"> Flight Readiness and Flight </div>
+    <div class="innertext"> Be ready to your flight with these services </div>
+	  <br>
+    <img src="seat.jfif" alt="seat" class="pic" id="seatselection" > <img src= "luggage.jpg" alt="luggage" class="pic" id="luggage"> <img src="meal.jpg" alt="meal" id="meal" class="pic"> <br>
+    <br>
+    <br><br><br>
+    <div class="headers"> Airport </div>
+    <div class="innertext"> Airport Accessibility </div><br>
+    <img src="carpark.jpg" alt="carpark" id="carpark" class="pic"> <img src="airportbus.jpg" alt="airbus" id="airbus" class="pic"> </div>
+  <div class="hoverbox_slide hoverbox_layer" >
+    <div class="hoverbox_text" id="airbnb_"> Hotels and AirBnb </div>
+    <div class="hoverbox_text" id="carride_" > Car Rental </div>
+    <div class="hoverbox_text" id="visa_" > Easy Visa </div>
+    <div class="hoverbox_text" id="seatselection_" > Seat Selection</div>
+    <div class="hoverbox_text" id="additional_baggage" > Additional Baggage </div>
+    <div class="hoverbox_text" id="food_selection" > Food Selection </div>
+    <div class="hoverbox_text" id="parking_" > Parking in Airport </div>
+    <div class="hoverbox_text" id="airport_access"  > Airport Access </div>
+  </div>
+</div>
+<script type="text/javascript">
+		
+	
+			function citnum() {
+        var yes = document.getElementById("yestc");
+        var reqcit = document.getElementById("TcCitizen");
+        reqcit.style.display = yes.checked ? "block" : "none";
+	//function to enable tr citizen number fielad if radio selected
+	
+	
+	} //duplicate form for another passenger entry
+		function addpass(){
+	 var para = document.createElement("P");
+  para.innerHTML +="<form id='passengerinfo'> <select id='select-title'> <option value='0'>Select Your Title</option> <option value='1'>Mr.</option> <option value='2'>Ms.</option><option value='3'>Mx.</option> </select><input type='text' placeholder='First Name (as shown in ID)' required ><input type='text' placeholder='Last Name (as shown in ID)' required><input type='text' placeholder='Enter Your Phone Number' id='phone' pattern='[0-9]{10}' required> <input type='date' placeholder='Enter Your Bhirtday' id='date' required > <label for='yestc'  > I am TR Citizen </label> <input type='radio' name='chcktc'> <label for='notc'> I'm not TR Citizen </label>  <input type='radio' name='chcktc' id='tcno' > </hr> <input type='text' placeholder='Enter Your Citizen Number'></form>";
+		document.getElementById("passengerinfo").appendChild(para);
+			var form = document.getElementById("passengerinfo");
+			form.insertBefore(para, form.childNodes[0]);
+		}
+	function scrollWin(x, y) {
+  window.scrollBy(x, y);
+} 
+</script>
+</body>
+</html>
