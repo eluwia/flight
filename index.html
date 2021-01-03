@@ -7,7 +7,7 @@ html {
     scroll-behavior: smooth;
 }
 #middle {
-margin-bottom: -50px;
+    margin-bottom: -50px;
 }
 forminput {
     width: 300px;
@@ -32,8 +32,7 @@ body {
 form {
     max-width: 300px;
     margin: 10em auto;
-	position: relative;
-
+    position: relative;
 }
 legend {
     font-size: 24px;
@@ -72,13 +71,41 @@ input[type="text"]:focus::-webkit-input-placeholder, input[type="text"]:valid ~ 
 -webkit-transform: translate(0, -75%) scale(0.9, 0.9);
 visibility: visible !important;
 overflow: visible;
-	
 }
 #border {
     width: 350px;
 }
 #select-title {
     width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+#expmonth {
+    width: 145px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
+	
+#expyear {
+    width: 145px;
     font: bolder;
     font-display: block;
     box-sizing: border-box;
@@ -133,6 +160,22 @@ overflow: visible;
     border: 1px solid #ccc;
     border-radius: 5em;
 }
+#button3 {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+    margin-left: 600px;
+    margin-top: 50px;
+}
 #button2 {
     width: 300px;
     font: bolder;
@@ -172,9 +215,23 @@ overflow: visible;
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.btn-submit {
+    width: 300px;
+    font: bolder;
+    font-display: block;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 2em;
+    height: 3em;
+    padding: 0.5em 1.34em;
+    margin-bottom: 1em;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5em;
+}
 .topnav a.active {
     background-color: #1060BC;
-    color: ;
+color:;
 }
 #navbar2 {
 background:
@@ -238,8 +295,8 @@ width: 100%;
 .content .content-overlay {
     background: rgba(0,0,0,0.7);
     position: absolute;
-	max-height: 96%;
-	max-width: 98%;
+    max-height: 96%;
+    max-width: 98%;
     height: 96%;
     width: 98%;
     left: 2;
@@ -253,8 +310,8 @@ width: 100%;
 }
 .content:hover .content-overlay {
     opacity: 1;
-	max-height: 400px;
-	max-width: 400px;
+    max-height: 400px;
+    max-width: 400px;
 }
 .content-image {
     width: 100%;
@@ -300,173 +357,311 @@ width: 100%;
     font-weight: 500;
     letter-spacing: 0.15em;
     font-size: 2em;
-	text-align: left;
+    text-align: left;
 }
 .intext {
     margin-left: 90px;
     color: black;
     font-size: 0.9em;
 }
-	.bg {
-		background-image: url("background.jpg");	
-	}
+.bg {
+    background-image: url("background.jpg");
+}
+#topnav1 {
+    margin-top: 600px;
+}
+	
+.flip-box {
+  background-color: transparent;
+  width: 200px;
+  height: 100px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+	margin-left: 120px;
+	margin-top: 150px;
+}
+	
 
+.flip-box-inner {
+  position: relative;
+ width: 250px;
+	height: 100px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+	float: left;
+  position: absolute;
+  width: 250px;
+	height: 100px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #555;
+  color: white;
+  transform: rotateY(180deg);
+}
+	#flipboxcard {
+		float: left;
+		position: absolute;
+		display: inline;
+	}
+	#
 </style>
 <meta charset="utf-8">
 <title> Scandinavian Airlines </title>
 </head>
 
-<body> <section class="bg">
-<section id="topnav"> 
-  <!-- topnav bar with #active and icons-->
-  <div class="topnav"> <img class="logo" src="logo1.png" alt="" > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a class="active" href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
+<body>
+<section class="bg">
+  <section id="topnav"> 
+    <!-- topnav bar with #active and icons-->
+    <div class="topnav"> <img class="logo" src="logo1.png" alt="" > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a class="active" href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
+  </section>
+  <section id="form">
+    <form id="passengerinfo" action=" " method="get" name="passengerinfo">
+      <div class="forminput" >
+        <select name="hidden" id="select-title" >
+          <option value="0" id="title">Select Title</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Ms.">Ms.</option>
+          <option value="3">Mx.</option>
+        </select>
+      </div>
+      <div class="forminput" >
+        <input placeholder="First Name(as shown in ID)"  type="text" required id="name" >
+      </div>
+      <div class="forminput" >
+        <input placeholder="Last Name(as shown in ID)"  type="text" required id="lname" >
+      </div>
+      <div class="forminput" >
+        <input type="text" placeholder="Enter Your Phone Number"  id="phone" pattern="[0-9]{10}" required >
+      </div>
+      <div class="forminput">
+        <input placeholder="Enter Your Bhirtday"  type="date" id="date" required >
+      </div>
+      <div class="forminput" >
+        <label for="yestc">
+          <input type="radio" name="chktc" onClick="citnum()" id="yestc" />
+          <!-- Radio buttons to select --> 
+          I am TR Citizen </label>
+      </div>
+      <div class="forminput" >
+        <label for="notc">
+          <input type="radio" name="chktc" id="notc" onClick="citnum()">
+          I'm not TR Citizen</label>
+      </div>
+      <hr/>
+      <div class="forminput" >
+        <div id="TcCitizen" style="display: none" >
+          <input type="text" id="CitizenNumber" placeholder="Enter Your Citizen Number" pattern="[0-9]{11}" required   />
+        </div>
+        <div >
+          <input type="button" id="button2" value="Add Another Passenger" onClick="addpass();scrollWin(0,-10000000000)">
+        </div>
+      </div>
+      <div> <a href="#middle">
+        <input type="button" id="button1" value="Submit all and Go To Services" onClick="scrollWin(0,920)">
+        </a> </div>
+    </form>
+  </section>
+  <section id="navbar2"></section>
+  <div class="topnav" id="middle"  > <img class="logo" src="logo1.png" alt=""  > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a  href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a class="active" href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a  href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
 </section>
-<section id="form">
-  <form id="passengerinfo" action=" " method="get">
+<br>
+<br>
+<section>
+  <div>
+    <h3 class="additonalservices"> Extra Travel Packages and Services </h3>
+    <p class="intext" > Choose travel extras according to your needs, flight preferences and different price options, decide how you will start to travel, pay as much as you need, fly comfortably. </p>
+  </div>
+  <div> <br>
+    <hr/>
+    <br>
+    <h3 class="additonalservices"> Travel Planning </h3>
+    <br>
+    <p class="intext"> Plan your travel </p>
+  </div>
+  <br>
+  <div class="hoverboxlight">
+    <div class="content"> <a href="airbnb.jpg" target="_blank" >
+      <div class="content-overlay"></div>
+      <img class="content-image" src="airbnb.jpg" alt="">
+      <div class="content-details fadeIn-bottom  ">
+        <h3 class="content-title">Hotels &amp; AirBnb</h3>
+        <p class="content-text">Hotel Reservation</p>
+      </div>
+      </a> </div>
+  </div>
+  <div class="content" > <a href="germany-schengen-visa.jpg" target="_blank" >
+    <div class="content-overlay"></div>
+    <img class="content-image" src="germany-schengen-visa.jpg" alt="" >
+    <div class="content-details fadeIn-bottom ">
+      <h3 class="content-title">Visa</h3>
+      <p class="content-text">Easy Visa Access</p>
+    </div>
+    </a> </div>
+  <div>
+    <div class="content" > <a href="car-ride.jpg" target="_blank" >
+      <div class="content-overlay"></div>
+      <img class="content-image" src="car-ride.jpg" alt="" >
+      <div class="content-details fadeIn-bottom ">
+        <h3 class="content-title">Rent a Car</h3>
+        <p class="content-text">Rent a Car or Search for Transfers </p>
+      </div>
+      </a> <br>
+      <br>
+    </div>
+  </div>
+  <div>
+    <p class="additonalservices"> Pre-Flight and During Flight </p>
+    <br>
+    <p class="intext"> Plan your flight </p>
+    <br>
+    <div class="content" > <a href="seat.jfif" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="seat.jfif" alt=""  >
+      <div class="content-details fadeIn-bottom ">
+        <h3 class="content-title">Seat</h3>
+        <p class="content-text">Select the Seat you want</p>
+      </div>
+      </a> </div>
+  </div>
+  <div>
+    <div class="content" > <a href="meal.jpg" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="meal.jpg" alt=""  >
+      <div class="content-details fadeIn-bottom ">
+        <h3 class="content-title">Meal</h3>
+        <p class="content-text">Pre-order your meal</p>
+      </div>
+      </a> </div>
+  </div>
+  <div>
+    <div class="content" > <a href="luggage.jpg" target="_blank">
+      <div class="content-overlay"></div>
+      <label for="seat"></label>
+      <img class="content-image" src="luggage.jpg" alt=""  >
+      <div class="content-details fadeIn-bottom ">
+        <h3 class="content-title">Baggage</h3>
+        <p class="content-text">Additional Baggage Packages</p>
+      </div>
+      </a> <br>
+      <br>
+    </div>
+  </div>
+  <div>
+    <p class="additonalservices">Accesibility Packages </p>
+    <br>
+    <p class="intext"> Parking lot reservation and more </p>
+    <br>
+  </div>
+  <div>
+    <div class="content" > <a href="carpark.jpg" target="_blank">
+      <div class="content-overlay"></div>
+      <label for="seat"></label>
+      <img class="content-image" src="carpark.jpg" alt=""  >
+      <div class="content-details fadeIn-bottom ">
+        <h3 class="content-title">Parking Lot</h3>
+        <p class="content-text">You can use our parking lot </p>
+      </div>
+      </a> </div>
+  </div>
+  <div>
+    <div class="content" > <a href="airportbus.jpg" target="_blank">
+      <div class="content-overlay"></div>
+      <label for="seat"></label>
+      <img class="content-image" src="airportbus.jpg" alt=""  >
+      <div class="content-details fadeIn-bottom ">
+        <h3 class="content-title">Access to Airport</h3>
+        <p class="content-text">Order tickets for our airport buses</p>
+      </div>
+      </a> </div>
+  </div>
+</section>
+<section id="payment" >
+  <div id="buttontopay">
+    <input type="button" value="Proceed to payment" onClick="scrollWin(0,1200)" id="button3"  class="button" name="button3">
+  </div>
+</section>
 	
-    <div class="forminput" >
-      <select name="hidden" id="select-title" >
-        <option value="0" id="title">Select Title</option>
-        <option value="Mr.">Mr.</option>
-        <option value="Ms.">Ms.</option>
-        <option value="3">Mx.</option>
+<section id="topnav1"> 
+  <!-- topnav bar with #active and icons-->
+  <div class="topnav"> <img class="logo" src="logo1.png" alt="" > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a  class="active" href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
+</section> <section id="flipboxcard">
+	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="cardforntt.jpg" alt="card" style="width:300px;height:200px">
+    </div>
+    <div class="flip-box-back">
+      <img src="cardoback.jpg" alt="" style="width:300px;height:200px">
+    </div>
+  </div></div></section>
+<section id="paymentform" >
+
+  <form action="mailto:airlines@hotmail.com" class="paymentform" >
+	  
+	   <div>
+      <input type="text" name="name" class="form-control" placeholder="Name" />
+    </div>
+    <div>
+      <label>Credit Card Number </label>
+      <input type="text" name="number" class="form-control" placeholder="••••/••••/••••/••••" />
+    </div>
+    <div>
+      <select name="expdate" id="expmonth">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <select name="expdate1" id="expyear">
+        <option value="1">2021</option>
+        <option value="2">2022</option>
+        <option value="3">2023</option>
+        <option value="4">2024</option>
+        <option value="5">2025</option>
       </select>
     </div>
-    <div class="forminput" >
-      <input placeholder="First Name(as shown in ID)"  type="text" required id="name" >
+   
+    <div>
+      <label>CVV </label>
+      <input type="text" name="cvv" class="form-control" placeholder="•••" />
     </div>
-    <div class="forminput" >
-      <input placeholder="Last Name(as shown in ID)"  type="text" required id="lname" >
+    <div >
+      <button type="submit" class="btn btn-submit" >Submit and Send Bill to Your Email</button>
     </div>
-    <div class="forminput" >
-      <input type="text" placeholder="Enter Your Phone Number"  id="phone" pattern="[0-9]{10}" required >
-    </div>
-    <div class="forminput">
-      <input placeholder="Enter Your Bhirtday"  type="date" id="date" required >
-    </div>
-    <div class="forminput" >
-      <label for="yestc">
-        <input type="radio" name="chktc" onClick="citnum()" id="yestc" />
-        <!-- Radio buttons to select --> 
-        I am TR Citizen </label>
-    </div>
-    <div class="forminput" >
-      <label for="notc">
-        <input type="radio" name="chktc" id="notc" onClick="citnum()">
-        I'm not TR Citizen</label>
-    </div>
-    <hr/>
-    <div class="forminput" >
-      <div id="TcCitizen" style="display: none" >
-        <input type="text" id="CitizenNumber" placeholder="Enter Your Citizen Number" pattern="[0-9]{11}" required   />
-      </div>
-      <div id="forminput" >
-        <input type="submit" id="button2" value="Add Another Passenger" onClick="addpass();scrollWin(0,-10000000000)">
-      </div>
-    </div>
-    <div class="forminput" > <a href="#middle">
-      <input type="submit" id="button1" value="Submit all and Go" onClick="scrollWin(0,920)">
-      </a> </div>
   </form>
-	</section> 
-<section id="navbar2"></section>
- <div class="topnav" id="middle"  > <img class="logo" src="logo1.png" alt=""  > <a  href="#flight" > <i class="fas fa-plane-departure"> </i> Select Flight</a> <a  href="#passenger"> <i class="fas fa-user-alt" > </i> Passenger Details</a> <a class="active" href="#services"> <i class="fas fa-luggage-cart"> </i> Additional Services</a> <a  href="#payment"> <i class="fas fa-money-check"> </i> Payment</a> </div>
 </section>
-<br><br>
-<div>
-  <h3 class="additonalservices"> Extra Travel Packages and Services </h3>
-  <p class="intext" > Choose travel extras according to your needs, flight preferences and different price options, decide how you will start to travel, pay as much as you need, fly comfortably. </p>
-</div>
-<div> <br>
-  <hr/>
-  <br>
-  <h3 class="additonalservices"> Travel Planning </h3>
-	<br>
-  <p class="intext"> Plan your travel </p>
-</div>
-<br>
-<div class="hoverboxlight">
-  <div class="content"> <a href="airbnb.jpg" target="_blank" >
-    <div class="content-overlay"></div>
-    <img class="content-image" src="airbnb.jpg" alt="">
-    <div class="content-details fadeIn-bottom  ">
-      <h3 class="content-title">Hotels &amp; AirBnb</h3>
-      <p class="content-text">Hotel Reservation</p>
-    </div>
-    </a> </div>
-</div>
-<div class="content" > <a href="germany-schengen-visa.jpg" target="_blank" >
-  <div class="content-overlay"></div>
-  <img class="content-image" src="germany-schengen-visa.jpg" alt="" >
-  <div class="content-details fadeIn-bottom ">
-    <h3 class="content-title">Visa</h3>
-    <p class="content-text">Easy Visa Access</p>
-  </div>
-  </a>  </div><div>
-<div class="content" > <a href="car-ride.jpg" target="_blank" >
-  <div class="content-overlay"></div>
-  <img class="content-image" src="car-ride.jpg" alt="" >
-  <div class="content-details fadeIn-bottom ">
-    <h3 class="content-title">Rent a Car</h3>
-    <p class="content-text">Rent a Car or Search for Transfers </p>
-  </div>
-  </a> <br><br> </div></div>
-<div>
-  <p class="additonalservices"> Pre-Flight and During Flight </p>
-	<br>
-  <p class="intext"> Plan your flight </p>
-  <br>
-  <div class="content" > <a href="seat.jfif" target="_blank">
-    <div class="content-overlay"></div>
-  <img class="content-image" src="seat.jfif" alt=""  >
-    <div class="content-details fadeIn-bottom ">
-      <h3 class="content-title">Seat</h3>
-      <p class="content-text">Select the Seat you want</p>
-    </div>
-    </a> </div>
-</div><div>
-	<div class="content" > <a href="meal.jpg" target="_blank">
-    <div class="content-overlay"></div>
- <img class="content-image" src="meal.jpg" alt=""  >
-    <div class="content-details fadeIn-bottom ">
-      <h3 class="content-title">Meal</h3>
-      <p class="content-text">Pre-order your meal</p>
-    </div>
-    </a> </div></div>
-<div>
-	<div class="content" > <a href="luggage.jpg" target="_blank">
-    <div class="content-overlay"></div>
-  <label for="seat"></label>  <img class="content-image" src="luggage.jpg" alt=""  >
-    <div class="content-details fadeIn-bottom ">
-      <h3 class="content-title">Baggage</h3>
-      <p class="content-text">Additional Baggage Packages</p>
-    </div>
-    </a> <br> <br> </div></div>
-<div> 
-  <p class="additonalservices">Accesibility Packages </p><br>
-  <p class="intext"> Parking lot reservation and more </p>
-	<br></div><div>
-	<div class="content" > <a href="carpark.jpg" target="_blank">
-    <div class="content-overlay"></div>
-  <label for="seat"></label>  <img class="content-image" src="carpark.jpg" alt=""  >
-    <div class="content-details fadeIn-bottom ">
-      <h3 class="content-title">Parking Lot</h3>
-      <p class="content-text">You can use our parking lot </p>
-    </div>
-    </a> </div></div>
-<div>
-	<div class="content" > <a href="airportbus.jpg" target="_blank">
-    <div class="content-overlay"></div>
-  <label for="seat"></label>  <img class="content-image" src="airportbus.jpg" alt=""  >
-    <div class="content-details fadeIn-bottom ">
-      <h3 class="content-title">Access to Airport</h3>
-      <p class="content-text">Order tickets for our airport buses</p>
-    </div>
-    </a> </div></div>
-
-	
 <script type="text/javascript">
 		
+	function citnum1() {
+        var yestcc = document.getElementById("yest");
+        var reqcit1 = document.getElementById("tcnono");
+        reqcit1.style.display = yestcc.checked ? "block" : "none";
+	}
 	
 			function citnum() {
         var yes = document.getElementById("yestc");
@@ -478,8 +673,9 @@ width: 100%;
 	} //duplicate form for another passenger entry
 		function addpass(){
 	 var para = document.createElement("P");
-  para.innerHTML +="<form id='passengerinfo'> <select id='select-title'> <option value='0'>Select Your Title</option> <option value='1'>Mr.</option> <option value='2'>Ms.</option><option value='3'>Mx.</option> </select><input type='text' placeholder='First Name (as shown in ID)' required ><input type='text' placeholder='Last Name (as shown in ID)' required><input type='text' placeholder='Enter Your Phone Number' id='phone' pattern='[0-9]{10}' required> <input type='date' placeholder='Enter Your Bhirtday' id='date' required > <label for='yestc'  > I am TR Citizen </label> <input type='radio' name='chcktc'> <label for='notc'> I'm not TR Citizen </label>  <input type='radio' name='chcktc' id='tcno' > </hr> <input type='text' placeholder='Enter Your Citizen Number'></form>";
-		document.getElementById("passengerinfo").appendChild(para);
+  para.innerHTML +=" <div> <form id='passengerinfo'> <div class='forminput' > <select id='select-title'> <option value='0'>Select Your Title</option> <option value='1'>Mr.</option> <option value='2'>Ms.</option><option value='3'>Mx.</option> </select></div> <div  class='forminput'><input type='text' placeholder='First Name (as shown in ID)' required ></div><div  class='forminput'><input type='text' placeholder='Last Name (as shown in ID)' required></div><div  class='forminput'><input type='text' placeholder='Enter Your Phone Number' id='phone' pattern='[0-9]{10}' required></div><div  class='forminput'> <input type='date' placeholder='Enter Your Bhirtday' id='date' required > </div><div  class='forminput'> <label for='yest'   > I am TR Citizen </label> <input type='radio' name='chcktc' onClick='citnum1()' id='yest'> </div><div  class='forminput'><label for='notc'> I'm not TR Citizen </label>  <input type='radio' name='chcktc' id='tcno' onClick='citnum1()' > </div> </hr> <div  class='forminput' id='tcnono' style='display: none'> <input type='text'  placeholder='Enter Your Citizen Number' id='citnumber'  required></div></form></div>";
+		
+			document.getElementById("passengerinfo").appendChild(para);
 			var form = document.getElementById("passengerinfo");
 			form.insertBefore(para, form.childNodes[0]);
 		}
